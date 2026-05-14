@@ -29,9 +29,18 @@ export default function Home({ Data }) {
   ] = Data;
   const BlogData = (BlogDoc && BlogDoc.BlogData) || [];
 
+  const customNavbarData = [
+    { Name: "Home", Link: "#Home", img: "home" },
+    { Name: "Work Experience", Link: "#Experience", img: "timeline" },
+    { Name: "Skills", Link: "#Skills", img: "skills" },
+    { Name: "Projects", Link: "#Project", img: "project" },
+    { Name: "Blogs", Link: "#Blog", img: "project" }, 
+    { Name: "Contact", Link: "#Contact", img: "contact" }
+  ];
+
   return (
     <div style={mainStyle}>
-      <Nevbar data={NevbarData} />
+      <Nevbar data={customNavbarData} />
       <Homepage data={homeData} aboutData={aboutData} />
       <Experience data={ExperienceData} />
       <Skills data={SkillsData} />

@@ -2,9 +2,12 @@ import styled from "styled-components";
 import { flexCenter } from "../../styles/flexCenter";
 
 export const ContactPage = styled(flexCenter)`
+  flex-direction: column;
   height: 120vh;
   width: 100vw;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15vh;
   background-color: #fcd5ce;
   background-image: url("/PageImg/Contact.svg");
   background-repeat: no-repeat;
@@ -20,10 +23,10 @@ export const ContactPage = styled(flexCenter)`
 export const ContactForm = styled.form`
   width: 100%;
   max-width: 32rem;
-  margin: 30% auto 5rem;
+  margin: 2rem auto 5rem;
   @media (max-width: 612px) {
     width: 70%;
-    margin-top: 40%;
+    margin-top: 3rem;
   }
 `;
 export const ContactOuterDiv = styled.div`
@@ -97,11 +100,27 @@ export const ContactTextArea = styled.textarea`
 
 export const ContactButton = styled.button`
   padding: 0.75rem 1.5rem;
-  background-color: lightblue;
+  background-color: #3b82f6; /* Vibrant blue */
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
   border-radius: 10px;
   border: 0px;
   margin-left: 3%;
   width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.4), 0 2px 4px -1px rgba(59, 130, 246, 0.3);
+  
+  &:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(59, 130, 246, 0.5), 0 4px 6px -1px rgba(59, 130, 246, 0.4);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
 `;
 export const ContactButtonDiv = styled.button`
   display: flex;

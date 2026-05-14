@@ -13,8 +13,7 @@ import {
   ContactTextArea,
   ContactButtonDiv,
 } from "./ContactComponents";
-
-import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
+import { ProjectTitle } from "../Project/ProjectContainerComponents";
 function Contact() {
   const id = useId();
   const FirstName = useRef();
@@ -36,16 +35,10 @@ function Contact() {
     Email.current.value = "";
     Message.current.value = "";
   }
-  const ScrollElements = [
-    "ContactName",
-    "ContactEmail",
-    "ContactMessage",
-    "ContactButton",
-  ];
-  ScrollAnimation(ScrollElements);
   return (
     <section id="Contact">
       <ContactPage>
+        <ProjectTitle>CONTACT</ProjectTitle>
         <ContactForm onSubmit={submitfunc}>
           <ContactOuterDiv id="ContactName">
             <ContactInnerDivHalf >
