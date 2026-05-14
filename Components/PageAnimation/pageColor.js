@@ -6,12 +6,12 @@ import GetPosition from "../Hooks/getPosition";
 const PageColorAnimation = () => {
   const position = useScrollPosition();
   useEffect(() => {
-    let Body = document.querySelector("body");
-    let Home = GetPosition("Home");
-    let AboutPos = GetPosition("About");
-    let ProjectPos = GetPosition("Project");
-    let ContactPos = GetPosition("Contact");
-    let ExperiencePos = GetPosition("Experience");
+    const Body = document.querySelector("body");
+    const Home = GetPosition("Home");
+    const AboutPos = GetPosition("About");
+    const ProjectPos = GetPosition("Project");
+    const ContactPos = GetPosition("Contact");
+    const ExperiencePos = GetPosition("Experience");
     // Home 0 About 916 Project 1832 Contact 3904 Experience 2748
     console.log(
       "Home",

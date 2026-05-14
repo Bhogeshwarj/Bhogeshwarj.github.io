@@ -14,7 +14,7 @@ export const Cursor = styled.div`
   }
 `;
 const Index = () => {
-  let CursorPos = useRef(null);
+  const CursorPos = useRef(null);
   useEffect(() => {
     document.addEventListener("mousemove", (event) => {
       const { clientX, clientY } = event;
