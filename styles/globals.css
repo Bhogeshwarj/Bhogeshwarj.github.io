@@ -1,8 +1,14 @@
-body{
+html,
+body {
   margin: 0px;
+  padding: 0px;
+  width: 100%;
+  overflow-x: hidden;
   transition: all 0.2s;
-  width: 100vw;
 }
 body::-webkit-scrollbar {
   display: none;
+}
+section, [id] {
+  scroll-margin-top: 5.5rem;
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const AboutPageContainer = styled(flexCenter)`
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #c1d5a4;
   background-image: url("/PageImg/AboutPage.svg");
   background-repeat: no-repeat;
@@ -35,10 +35,17 @@ export const AboutPara = styled.div`
   &::selection {
     background-color: transparent;
   }
+  @media (max-width: 992px) {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 1rem;
+    text-align: center;
+  }
   @media (max-width: 480px) {
+    width: 85%;
+    margin: 0 auto;
     padding-top: 0rem;
-    margin-left: 2rem;
-    width: 75%;
+    text-align: center;
   }
 `;
 export const AboutImg = styled.div`

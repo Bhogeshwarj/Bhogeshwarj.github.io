@@ -12,14 +12,29 @@ export const NevbarUl = styled.ul`
   margin-left: 0px;
   justify-content: center;
   cursor: pointer;
-  z-index: 20;
+  z-index: 999;
   -webkit-tap-highlight-color: transparent;
+  padding-inline-start: 0;
   &::selection {
     background-color: transparent;
   }
 
-  @media (max-width: 480px) {
-    padding-inline-start: 10px;
+  @media (max-width: 768px) {
+    flex-direction: row;
+    top: 0px;
+    bottom: auto;
+    left: 0px;
+    right: 0px;
+    height: 4.5rem;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(84, 186, 185, 0.95);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 20px 20px;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
 `;
 export const Nevbarli = styled.div`
@@ -36,7 +51,7 @@ export const Nevbarli = styled.div`
   margin-top: 1.3rem;
   font-size: 0px;
   padding: 10px;
-  transition: max-width 0.5s;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
   &:hover {
     background-color: lightblue;
@@ -45,9 +60,24 @@ export const Nevbarli = styled.div`
     min-width: 5rem;
     gap: 10px;
     font-size: small;
-    transition: max-width width 0.5s;
+    max-width: 200px;
   }
   &::selection {
     background-color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    transform: none;
+    margin-top: 0;
+    flex-direction: row;
+    max-width: none;
+    min-height: 30px;
+    max-height: none;
+    font-size: 0px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
   }
 `;

@@ -4,7 +4,7 @@ import { flexCenter } from "../../styles/flexCenter";
 export const ContactPage = styled(flexCenter)`
   flex-direction: column;
   height: 120vh;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   justify-content: center;
   padding-top: 15vh;

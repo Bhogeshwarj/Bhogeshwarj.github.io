@@ -7,7 +7,7 @@ import { useMediaQuery } from "../Hooks/useMediaQuery";
 
 const BlogMain = styled.section`
   display: flex;
-  width: 100vw;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;

@@ -7,18 +7,22 @@ export const MainInfo = styled(flexCenter)`
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% 28vh;
-  width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
   color: black;
   flex-direction: column;
   min-height: 100vh;
   height: auto;
-  padding: 7rem 0 6rem;
+  padding: 7rem 2rem 6rem;
   justify-content: flex-start;
   &::selection {
     background-color: transparent;
   }
   @media (max-width: 992px) {
-    padding: 5rem 0 4rem;
+    padding: 5rem 1.5rem 4rem;
+  }
+  @media (max-width: 480px) {
+    padding: 5rem 1rem 4rem;
   }
 `;
 

@@ -59,9 +59,9 @@ export const TimelineLine = styled.div`
   border-radius: 2px;
 
   @media (max-width: 768px) {
-    left: 30px;
-    top: 70px;
-    bottom: 70px;
+    left: 35px;
+    top: 60px;
+    bottom: 60px;
   }
 `;
 
@@ -75,8 +75,10 @@ export const TimelineItem = styled.div`
 
   @media (max-width: 768px) {
     justify-content: flex-start;
-    padding-left: 80px;
-    margin-bottom: 4rem;
+    padding-left: 70px;
+    padding-right: 15px;
+    margin-bottom: 3rem;
+    box-sizing: border-box;
   }
 `;
 
@@ -98,9 +100,10 @@ export const TimelineCircle = styled.div`
   gap: 0.1rem;
 
   @media (max-width: 768px) {
-    left: 30px;
-    width: 70px;
-    height: 70px;
+    left: 35px;
+    width: 54px;
+    height: 54px;
+    border: 4px solid #afb4ff;
   }
 `;
 
@@ -112,7 +115,7 @@ export const TimelineYear = styled.span`
   line-height: 1.2;
 
   @media (max-width: 768px) {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 `;
 
@@ -126,7 +129,7 @@ export const TimelineMonth = styled.span`
   opacity: 0.9;
 
   @media (max-width: 768px) {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
   }
 `;
 
@@ -142,7 +145,7 @@ export const TimelineCard = styled.div`
   margin-right: ${(props) => (props.isLeft ? "calc(55% + 1rem)" : "0")};
 
   @media (max-width: 768px) {
-    width: calc(100% - 80px);
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
   }

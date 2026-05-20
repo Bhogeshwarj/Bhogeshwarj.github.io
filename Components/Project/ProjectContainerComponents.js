@@ -64,7 +64,7 @@ export const ProjectDiv = styled.div`
 `;
 export const ProjectMain = styled.div`
   display: flex;
-  width: 100vw;
+  width: 100%;
   flex-direction: column;
   min-height: 120vh;
   padding-bottom: 20vh;

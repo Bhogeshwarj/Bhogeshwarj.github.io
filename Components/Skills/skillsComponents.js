@@ -31,7 +31,7 @@ export const Lang = styled.div`
   align-items: center;
   justify-content: space-evenly;
   min-height: 10vh;
-  width: "32vw";
+  width: 32vw;
   font-family: "Rum Raisin", sans-serif;
   min-width: 15rem;
   border-radius: 2rem;
