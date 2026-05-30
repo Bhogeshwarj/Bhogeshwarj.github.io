@@ -6,14 +6,6 @@ import Link from "next/link";
 
 function Nevbar({ data }) {
   const [check, setcheck] = useState(0);
-  const toggleActive = {
-    backgroundColor: "lightblue",
-    height: "30px",
-    flexDirection: "row",
-    minWidth: "5rem",
-    gap: "10px",
-    fontSize: "small",
-  };
 
   useEffect(() => {
     const sections = data.map((item) => document.querySelector(item.Link));
@@ -64,7 +56,7 @@ function Nevbar({ data }) {
                 onClick={() => {
                   setcheck(index);
                 }}
-                style={check == index ? toggleActive : {}}
+                isActive={check == index}
               >
                 <Image
                   src={`/icons8-${content.img}-32.png`}

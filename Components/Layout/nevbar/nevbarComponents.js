@@ -47,11 +47,21 @@ export const Nevbarli = styled.div`
   flex-direction: column;
   min-height: 30px;
   max-height: 30px;
-  background-color: #54bab9;
+  background-color: ${(props) => (props.isActive ? "lightblue" : "#54bab9")};
   margin-top: 1.3rem;
-  font-size: 0px;
+  font-size: ${(props) => (props.isActive ? "small" : "0px")};
   padding: 10px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  ${(props) =>
+    props.isActive &&
+    `
+    height: 30px;
+    flex-direction: row;
+    min-width: 5rem;
+    gap: 10px;
+    max-width: 200px;
+  `}
 
   &:hover {
     background-color: lightblue;
@@ -74,10 +84,26 @@ export const Nevbarli = styled.div`
     min-height: 30px;
     max-height: none;
     font-size: 0px;
-    padding: 8px 12px;
+    padding: 8px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    min-width: auto;
+    
+    ${(props) =>
+      props.isActive &&
+      `
+      background-color: lightblue;
+      min-width: auto;
+      gap: 0;
+      font-size: 0px; 
+    `}
+
+    &:hover {
+      min-width: auto;
+      font-size: 0px;
+      gap: 0;
+    }
   }
 `;

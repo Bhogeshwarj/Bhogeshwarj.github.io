@@ -158,7 +158,7 @@ export const CompanyLogo = styled.img`
   object-fit: contain;
   margin-bottom: 1rem;
   border: 3px solid #f0f0f0;
-  background: white;
+  background: ${(props) => props.bgColor || 'white'};
   ${(props) => props.padding && `padding: ${props.padding};`}
   ${(props) => props.padding && `box-sizing: border-box;`}
 `;

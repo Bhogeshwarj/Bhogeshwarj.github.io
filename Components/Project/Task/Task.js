@@ -31,10 +31,28 @@ function Task({ data }) {
   ScrollAnimation(["Task-ShowMore", ...ScrollElements]);
 
   const ColorThemeArr = [{ main: "#ffe4b2", gradient: "#9C9EFE" }];
+  const processedData = data.map(item => {
+    if (item.TaskHeading === "AI Mock Interview Platform") {
+      return {
+        ...item,
+        TaskHeading: "Life OS",
+        More: "https://life-os-824i.vercel.app/",
+        Github: "https://life-os-824i.vercel.app/"
+      };
+    }
+    if (item.TaskHeading && item.TaskHeading.includes("BookMyArena")) {
+      return {
+        ...item,
+        More: "https://bookmyarena-ten.vercel.app/"
+      };
+    }
+    return item;
+  });
+
   return (
     <>
       <TaskContainer>
-        {data.slice(0, item).map((content, index) => (
+        {processedData.slice(0, item).map((content, index) => (
           <TasksDiv
             id={`Task${index}`}
             key={index}

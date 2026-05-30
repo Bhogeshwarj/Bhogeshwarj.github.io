@@ -15,7 +15,7 @@ import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 import Task from "./Task/Task";
 
 function Project({ data }) {
-  data = [].concat(data).reverse();
+  data = [].concat(data);
   const ScrollElements = ["ProjectTit"];
   ScrollAnimation(ScrollElements);
   return (

@@ -88,9 +88,15 @@ function Experience({ data = [] }) {
                   <TimelineCard isLeft={index % 2 === 0}>
                     <CardTopSection>
                     <CompanyLogo 
-                      src={`/experience/${exp.logo}`} 
+                      src={`/experience/${
+                        exp.company === 'Pairenthesis' ? 'new-icon.svg' : 
+                        exp.company === 'LDvia Innovations' ? 'ldvia-innovations.png' : 
+                        exp.company === 'DigiLifeStyle' ? 'digilifestyle.png' : 
+                        exp.logo
+                      }`} 
                       alt={exp.company}
                       padding={ exp.padding }
+                      bgColor={exp.company === 'LDvia Innovations' ? 'transparent' : 'white'}
                     />
                     
                     <JobDetails>

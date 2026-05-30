@@ -27,7 +27,7 @@ function Homepage({ data, aboutData = {} }) {
           <AboutContent>
             <AboutImg>
               <Image
-                src="/Gemini_Generated_Image_xgi6luxgi6luxgi6.png"
+                src="/my-image.jpeg"
                 alt="Profile"
                 fill
                 sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 33vw"
